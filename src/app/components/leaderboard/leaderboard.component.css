@@ -1,0 +1,34 @@
+.leaderboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 1rem;
+  border: none;
+}
+
+.rank {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+
+  &.gold {
+    background-color: #ffd700;
+    color: #212529;
+  }
+
+  &.silver {
+    background-color: #c0c0c0;
+    color: #212529;
+  }
+
+  &.bronze {
+    background-color: #cd7f32;
+    color: white;
+  }
+}

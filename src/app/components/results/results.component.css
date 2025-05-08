@@ -1,0 +1,28 @@
+.results-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 1rem;
+  border: none;
+  padding: 2rem;
+}
+
+.score-display {
+  font-size: 3rem;
+  font-weight: bold;
+
+  .score {
+    font-size: 5rem;
+  }
+
+  .total {
+    opacity: 0.7;
+  }
+}
+
+.name-form {
+  max-width: 400px;
+  margin: 0 auto;
+}

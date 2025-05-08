@@ -1,0 +1,44 @@
+<div class="results-container" @fadeAnimation>
+  <div class="card shadow-lg text-center">
+    <div class="card-body">
+      <h1 class="display-4 mb-4">Quiz Results</h1>
+
+      <div class="score-display mb-4">
+        <span class="score" [ngClass]="getScoreClass()">{{finalScore}}</span>
+        <span class="total">/{{totalQuestions}}</span>
+      </div>
+
+      <div class="progress mb-4" style="height: 20px;">
+        <div class="progress-bar" [ngClass]="getScoreClass()" [style.width.%]="getScorePercentage()">
+          {{getScorePercentage() | number:'1.0-0'}}%
+        </div>
+      </div>
+
+      <p class="lead mb-4">{{getScoreMessage()}}</p>
+
+      <div *ngIf="!isSubmitted" class="name-form mb-4">
+        <div class="mb-3">
+          <label for="playerName" class="form-label">Enter your name to save your score:</label>
+          <input type="text" class="form-control form-control-lg text-center" id="playerName" [(ngModel)]="playerName"
+            placeholder="Your Name">
+        </div>
+        <button class="btn btn-primary btn-lg" (click)="submitScore()" [disabled]="!playerName.trim()">
+          <i class="bi bi-save me-2"></i>Save Score
+        </button>
+      </div>
+
+      <div *ngIf="isSubmitted" class="text-success mb-4">
+        <i class="bi bi-check-circle-fill me-2"></i>Score saved successfully!
+      </div>
+
+      <div class="d-grid gap-3 col-md-8 mx-auto">
+        <button class="btn btn-primary btn-lg" (click)="restartQuiz()">
+          <i class="bi bi-arrow-repeat me-2"></i>Try Again
+        </button>
+        <button class="btn btn-outline-primary btn-lg" (click)="viewLeaderboard()">
+          <i class="bi bi-trophy me-2"></i>View Leaderboard
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

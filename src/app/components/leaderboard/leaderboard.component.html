@@ -1,0 +1,51 @@
+<div class="leaderboard-container" @fadeAnimation>
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h2 class="mb-0"><i class="bi bi-trophy me-2"></i>Leaderboard</h2>
+    </div>
+    <div class="card-body">
+      <div *ngIf="leaderboardEntries.length > 0; else noEntries">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Name</th>
+                <th scope="col">Score</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let entry of leaderboardEntries; let i = index"
+                [ngClass]="{'table-success': i === 0, 'table-light': i === 1 || i === 2}">
+                <td>
+                  <span *ngIf="i === 0" class="rank gold">1</span>
+                  <span *ngIf="i === 1" class="rank silver">2</span>
+                  <span *ngIf="i === 2" class="rank bronze">3</span>
+                  <span *ngIf="i > 2" class="rank">{{i + 1}}</span>
+                </td>
+                <td>{{entry.playerName}}</td>
+                <td><strong>{{entry.score}}</strong></td>
+                <td>{{getFormattedDate(entry.date)}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <ng-template #noEntries>
+        <div class="text-center py-5">
+          <i class="bi bi-emoji-frown display-1 text-muted"></i>
+          <p class="lead mt-3">No scores yet!</p>
+          <p>Be the first to take the quiz and get on the leaderboard.</p>
+        </div>
+      </ng-template>
+
+      <div class="text-center mt-4">
+        <a routerLink="/quiz" class="btn btn-primary btn-lg">
+          <i class="bi bi-play-fill me-2"></i>Take the Quiz
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

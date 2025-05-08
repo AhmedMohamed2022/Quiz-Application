@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "What is Angular?",
+      "options": [
+        "A JavaScript library for building user interfaces",
+        "A platform and framework for building single-page client applications",
+        "A back-end JavaScript runtime environment",
+        "A CSS framework for responsive design"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "text": "Which directive is used for conditional display in Angular?",
+      "options": ["*ngIf", "*ngFor", "*ngSwitch", "*ngShow"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "text": "What is the purpose of Angular services?",
+      "options": [
+        "To handle HTTP requests only",
+        "To manage component styling",
+        "To share data and functionality across components",
+        "To create database connections"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 4,
+      "text": "Which of these is a hook in Angular component lifecycle?",
+      "options": [
+        "componentDidMount",
+        "ngOnInit",
+        "onCreation",
+        "beforeRender"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 5,
+      "text": "What is the purpose of Angular routing?",
+      "options": [
+        "To format data before displaying it",
+        "To handle HTTP requests",
+        "To navigate between different components/views",
+        "To bundle the application for deployment"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 6,
+      "text": "Which Angular decorator is used to define a component?",
+      "options": ["@NgModule", "@Injectable", "@Directive", "@Component"],
+      "correctAnswer": 3
+    },
+    {
+      "id": 7,
+      "text": "What is the purpose of Angular pipes?",
+      "options": [
+        "To transform data before displaying it",
+        "To connect to backend systems",
+        "To handle user authentication",
+        "To create network tunnels"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 8,
+      "text": "Which file is the main entry point for an Angular application?",
+      "options": ["app.component.ts", "main.ts", "index.html", "angular.json"],
+      "correctAnswer": 1
+    },
+    {
+      "id": 9,
+      "text": "What does AOT stand for in Angular?",
+      "options": [
+        "Angular Object Templates",
+        "Advanced Object Types",
+        "Ahead Of Time compilation",
+        "Application Over Time"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 10,
+      "text": "Which symbol is used for property binding in Angular?",
+      "options": ["[ ]", "( )", "{{ }}", "[( )]"],
+      "correctAnswer": 0
+    }
+  ]
+}
